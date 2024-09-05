@@ -1,3 +1,5 @@
+These are my own Tampermonkey scripts to use with Nationstates.
+
 ***AddEverythingToCollection***
 
 This is a very blunt tool for when you want to add a lot of cards to a collection:
