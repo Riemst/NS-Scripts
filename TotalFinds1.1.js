@@ -2,7 +2,7 @@
 // @name         TotalFinds
 // @namespace    http://tampermonkey.net/
 // @version      1.1
-// @description  Counts the number of bullet points and occurrences of "found by" on the page
+// @description  Counts total finds on the Finds_History page
 // @author       Riemstagrad
 // @match        https://*.nationstates.net/*/finds_history=1
 // @grant        none
