@@ -24,3 +24,16 @@ This script displays, on the finds_history page, the total number of finds of th
 
 Changes and repositions the "market value" and "Bid amounts" displayed on cards when opening packs.
 For better visibility.
+
+
+***CLCS***
+
+Logged out containers when farming? This script fills out the text-fields on the login-page and lets you continue with "enter".
+Works with RCES. Adds one extra "enter" press for a logged out container.
+
+If you have your nations with their passwords stored in a spreadsheet, you can generate a list in the correct format with the following function:
+
+=IF(E$1="Y";SUBSTITUTE(CONCATENATE("'";LOWER(A1);"','";B1;"',");" ";"_");CONCATENATE(A1;",";B1))
+
+In this funtion the nationnames are in collumn A and the passwords in collumn B and the function goes in collumn C. In cell E1 there is a switch that lets you switch between the format for the above script (if value of cell E1 = "Y") or a format you can paste into Racoda's Gold Retriever or 9003's Gotissues (if value of cell E1 is anything but not "Y")
+This function works in OpenOffice Calc.
