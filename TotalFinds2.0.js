@@ -65,7 +65,7 @@
     for (let i = 0; i < timestamps.length; i++) {
         if (timestamps[i] < 1523145600) {
             S0++;
-        } else if (timestamps[i] < 1575458100) {
+        } else if (timestamps[i] < 1575418500) {
             S1++;
         } else if (timestamps[i] < 1668906000) {
             S2++;
