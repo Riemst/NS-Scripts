@@ -37,3 +37,8 @@ If you have your nations with their passwords stored in a spreadsheet, you can g
 
 In this funtion the nationnames are in collumn A and the passwords in collumn B and the function goes in collumn C. In cell E1 there is a switch that lets you switch between the format for the above script (if value of cell E1 = "Y") or a format you can paste into Racoda's Gold Retriever or 9003's Gotissues (if value of cell E1 is anything but not "Y")
 This function works in OpenOffice Calc.
+
+
+***Nationstates Fast Switcher***
+
+Adds a button that lets you switch between fast and www.
