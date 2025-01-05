@@ -1,3 +1,29 @@
+S4 flag templates:
+
+***_S4 Flag+banner.xcf***
+
+Design your full card in this area. There are some layers that show you the flag area and the banner area. Whatever you assemble, when happy create a new 'layer from visible'.
+
+***_S4 Flag.xcf***
+
+Paste that new layer into this file and align it centered and top. Save as png or whatever and upload this as your flag.
+
+***_S4 Banner.xcf***
+
+Paste the same layer from the first file into this file and align it centered and bottom.
+If you're only creating a banner, set the banner mask layer visible and on top. The area between the two black blocks will be visible on your card.
+
+***_S4 color palette***
+
+All colors used on S4 cards, per rarity. The layer names explain where the colours are used. You can use this file to easily pick matching colors with the color picker tool.
+If, for example, you use the color of the banner area as your flag and the color of the flag area as your banner, you will end up with flag and banner the same color.
+
+
+
+
+
+
+
 These are my own Tampermonkey scripts to use with Nationstates.
 
 ***AddEverythingToCollection***
