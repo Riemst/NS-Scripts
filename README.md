@@ -2,7 +2,7 @@ S4 flag templates:
 
 ***_S4 Flag+banner.xcf***
 
-Design your full card in this area. There are some layers that show you the flag area and the banner area. Whatever you assemble, when happy create a new 'layer from visible'.
+Design your full card in this file. There are some layers that show you the flag area and the banner area. Whatever you assemble, when happy create a new 'layer from visible'.
 
 ***_S4 Flag.xcf***
 
@@ -10,7 +10,7 @@ Paste that new layer into this file and align it centered and top. Save as png o
 
 ***_S4 Banner.xcf***
 
-Paste the same layer from the first file into this file and align it centered and bottom.
+Paste the same layer from the first file into this file and align it centered and bottom. Save as png and upload as banner.
 If you're only creating a banner, set the banner mask layer visible and on top. The area between the two black blocks will be visible on your card.
 
 ***_S4 color palette***
