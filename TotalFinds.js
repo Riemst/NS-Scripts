@@ -79,7 +79,7 @@
 
                 if (S0>0) {
                 const S0Line = document.createElement('p');
-                S0Line.textContent = `April's Fool: ${S0} = ${(S0/daysS0).toFixed(2)} per day.`;
+                S0Line.textContent = `April Fools: ${S0} = ${(S0/daysS0).toFixed(2)} per day.`;
                 resultDiv.appendChild(S0Line);
                 }
                 if (S1>0) {
