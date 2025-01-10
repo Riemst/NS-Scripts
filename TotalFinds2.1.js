@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         TotalFinds2.1
+// @name         TotalFinds
 // @namespace    http://tampermonkey.net/
 // @version      2.1
 // @description  More stats on the Find_History page
