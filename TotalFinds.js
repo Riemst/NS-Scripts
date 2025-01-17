@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         TotalFinds
 // @namespace    http://tampermonkey.net/
-// @version      2.1
+// @version      2.1.1
 // @description  More stats on the Find_History page
 // @author       Riemstagrad
 // @match        https://*.nationstates.net/*/finds_history=1
@@ -52,7 +52,7 @@
     // Extract the timestamp values from the 'data-epoch' attribute
     const timestamps = Array.from(timestampElements).map(el => el.getAttribute('data-epoch'));
 
-        let S0 = 0;
+    let S0 = 0;
     let S1 = 0;
     let S2 = 0;
     let S3 = 0;
@@ -62,8 +62,8 @@
     let daysS2 = 1082;
     let daysS3 = 786;
     const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-    const startS = new Date(2025, 1, 14);
-    let daysS4 = Math.round(Math.abs((startS - new Date()) / oneDay));
+    //const startS4 = new Date(2025, 1, 14);
+    let daysS4 = Math.round(Math.abs((new Date(1736848800000) - new Date().getTime())/oneDay));
     for (let i = 0; i < timestamps.length; i++) {
         if (timestamps[i] < 1523145600) {
             S0++;
@@ -71,7 +71,7 @@
             S1++;
         } else if (timestamps[i] < 1668906000) {
             S2++;
-        } else if (timestamps[i] < 1736848799) {
+        } else if (timestamps[i] < 1736848800) {
             S3++;
         } else {S4++;
                }
