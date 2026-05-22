@@ -1,0 +1,95 @@
+// ==UserScript==
+// @name         DeckPageBids&MVCss
+// @namespace    dsdf
+// @version      0.1
+// @description  Override CSS on a webpage
+// @author       You
+// @match        https://*.nationstates.net/page=deck
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Add your custom CSS here
+    var css = `
+        .deckcard-card-mv, .deckcard-card-buyers {
+            position: absolute;
+            font-family: "barlow", san-serif;
+            font-weight: 800;
+            border-radius: .6em;
+            margin: 1em .4em;
+            padding: 2px 6px;
+            font-size: 250%;
+            color: #0B00B0;
+            opacity: 1;
+        }
+
+        .deckcard-card-mv {
+            left: 0.25em;
+            top: 8.25em;
+        }
+
+        .deckcard-card-buyers {
+            left: 0.25em;
+            right: unset;
+            top: -2.75em;
+        }
+    `;
+
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode(css));
+    document.head.appendChild(style);
+
+    // Function to interpolate color based on value
+    function getColorForValue(value, minValue, maxValue) {
+        const red = 255; // Always stays 255
+        const green = Math.round(255 * (value - minValue) / (maxValue - minValue)); // Interpolated
+        const blue = 0; // Always stays 0
+
+        // Ensure green stays between 0 and 255
+        return `rgb(${red}, ${green}, ${blue})`;
+    }
+
+    // Function to apply color formatting based on value
+    function applyColorFormatting(element, value) {
+        const minValue = 1.00;
+        const maxValue = 50.00;
+
+        // Clamp the value between the minimum and maximum
+        const clampedValue = Math.max(minValue, Math.min(maxValue, value));
+
+        // Get the interpolated color
+        const color = getColorForValue(clampedValue, minValue, maxValue);
+
+        // Apply the background color
+        element.style.backgroundColor = color;
+    }
+
+    // Handle BID elements
+    const bidElements = document.querySelectorAll('.deckcard-card-buyers');
+    bidElements.forEach(function(element) {
+        const elementText = element.textContent.trim();
+        if (elementText.startsWith('BID: ')) {
+            const value = parseFloat(elementText.replace('BID: ', ''));
+            applyColorFormatting(element, value);
+        }
+    });
+
+    // Handle MV elements
+    const mvElements = document.querySelectorAll('.deckcard-card-mv');
+    mvElements.forEach(function(element) {
+        const mvText = element.textContent.trim();
+
+        let value = null;
+        if (mvText.startsWith('MV: ')) {
+            value = parseFloat(mvText.replace('MV: ', ''));
+        }
+
+        // Apply conditional formatting if a valid value was found
+        if (value !== null) {
+            applyColorFormatting(element, value);
+        }
+    });
+})();
